@@ -5,7 +5,7 @@ import json
 import os
 from datetime import datetime, timezone
 
-BASE_URL = "https://brunoarcaya.github.io/gigaachadinhos"
+BASE_URL = "https://gigaachadinhos.shop"
 
 def escape_xml(s):
     return (s.replace("&", "&amp;")
