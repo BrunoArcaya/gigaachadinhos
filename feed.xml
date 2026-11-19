@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Giga Achadinhos</title>
+    <link>https://brunoarcaya.github.io/gigaachadinhos/</link>
+    <description>Os melhores achadinhos e ofertas da Shopee, curadoria independente.</description>
+    <lastBuildDate>Thu, 19 Nov 2026 16:50:04 GMT</lastBuildDate>
+  <item>
+    <title>Celular Exemplo X1 Pro</title>
+    <link>https://brunoarcaya.github.io/gigaachadinhos/linha.html?id=exemplo-celular</link>
+    <description><p>O Celular Exemplo X1 Pro chega com tela AMOLED de 6,7&quot;, processador de última geração e bateria que dura dois dias. Ideal para quem busca desempenho e autonomia.</p><p><strong>Preço:</strong> R$ 899,90</p><p><a href="https://link.exemplo.com/celular-x1-pro" rel="nofollow">Ver oferta</a></p></description>
+    <guid isPermaLink="false">https://brunoarcaya.github.io/gigaachadinhos/item/exemplo-celular</guid>
+    <pubDate>Thu, 19 Nov 2026 16:50:04 GMT</pubDate>
+    <enclosure url="https://brunoarcaya.github.io/gigaachadinhos/media/celular-exemplo-x1-pro/foto2.jpg" length="0" type="image/jpeg" />
+    <media:content url="https://brunoarcaya.github.io/gigaachadinhos/media/celular-exemplo-x1-pro/foto2.jpg" medium="image">
+      <media:title>Celular Exemplo X1 Pro</media:title>
+      <media:description>O Celular Exemplo X1 Pro chega com tela AMOLED de 6,7&quot;, processador de última geração e bateria que dura dois dias. Ideal para quem busca desempenho e autonomia.</media:description>
+    </media:content>
+    <link rel="alternate" type="text/html" href="https://link.exemplo.com/celular-x1-pro" />
+  </item>
+  </channel>
+</rss>
