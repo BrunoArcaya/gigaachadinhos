@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giga Achadinhos | Ofertas e Achados da Shopee</title>
+  <meta name="description" content="Seleção diária dos melhores achadinhos, promoções e utilidades da Shopee com envio rápido." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <style>
+    :root {
+      --navy: #14284b;
+      --primary: #ee4d2d;
+      --primary-dark: #d73211;
+      --whatsapp: #25d366;
+      --whatsapp-dark: #1ebe5d;
+      --bg: #f4f5f7;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.4; }
+
+    header {
+      background: #ebebeb;
+      border-bottom: 1px solid #dcdcdc;
+      padding: 10px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .brand-logo {
+      height: 52px;
+      width: 52px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+    .brand-title {
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--navy);
+      letter-spacing: -0.3px;
+    }
+    .header-wpp {
+      background: var(--whatsapp);
+      color: #052e16;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 9px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(37, 211, 102, 0.25);
+    }
+
+    .container { max-width: 980px; margin: 0 auto; padding: 16px; }
+
+    /* Hero + Logo Central + Bloco de Convite WhatsApp */
+    .hero-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px 18px;
+      margin-bottom: 18px;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 14px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    }
+    .hero-logo {
+      width: 145px;
+      height: 145px;
+      object-fit: contain;
+      border-radius: 18px;
+      background: #eaeaea;
+      padding: 6px;
+    }
+    .hero-card h1 {
+      font-size: 1.3rem;
+      color: var(--navy);
+      max-width: 560px;
+    }
+    .hero-card p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      max-width: 540px;
+    }
+    .vip-btn {
+      background: var(--whatsapp);
+      color: #052e16;
+      font-weight: 800;
+      text-decoration: none;
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-size: 0.96rem;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.28);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .vip-btn:hover { background: var(--whatsapp-dark); transform: translateY(-1px); }
+
+    /* Busca e Categorias */
+    .controls { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+    .search-input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      background: #fff;
+    }
+    .categories { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+    .cat-btn {
+      border: 1px solid #d1d5db;
+      background: #fff;
+      color: var(--navy);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .cat-btn.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+    /* Grid de Produtos */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+      gap: 12px;
+    }
+    @media (min-width: 640px) {
+      .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    .thumb-wrap { position: relative; width: 100%; aspect-ratio: 1 / 1; background: #f3f4f6; }
+    .thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .card-body { padding: 12px; display: flex; flex-direction: column; flex: 1; }
+    .card-cat { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
+    .card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .price-row { margin-top: auto; }
+    .old-price { font-size: 0.78rem; color: var(--muted); text-decoration: line-through; display: block; }
+    .price { font-size: 1.1rem; font-weight: 800; color: var(--primary); }
+    .cta-card {
+      margin-top: 10px;
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 9px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .empty { text-align: center; padding: 40px 16px; color: var(--muted); grid-column: 1 / -1; }
+
+    footer {
+      margin-top: 32px;
+      padding: 24px 16px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid #e5e7eb;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="brand-link">
+      <img src="logo.png" alt="Logo Giga Achadinhos" class="brand-logo" />
+      <span class="brand-title">Giga Achadinhos</span>
+    </a>
+    <a href="https://chat.whatsapp.com/SEU_LINK_DO_GRUPO" target="_blank" rel="noopener" class="header-wpp">Grupo VIP WhatsApp</a>
+  </header>
+
+  <main class="container">
+    <!-- Bloco Principal com Logo + Convite WhatsApp -->
+    <section class="hero-card">
+      <img src="logo.png" alt="Giga Achadinhos" class="hero-logo" />
+      <h1>Achadinhos da Shopee com Desconto Real</h1>
+      <p>Entre no nosso grupo gratuito do WhatsApp e receba diariamente os melhores achados, cupons e ofertas relâmpago antes de esgotar.</p>
+      <a href="https://chat.whatsapp.com/SEU_LINK_DO_GRUPO" target="_blank" rel="noopener" class="vip-btn">
+        Entrar no Grupo VIP Grátis
+      </a>
+    </section>
+
+    <!-- Filtros -->
+    <section class="controls">
+      <input type="search" id="searchInput" class="search-input" placeholder="Buscar achadinho (ex: cozinha, fone, organizador)..." />
+      <div id="categoryBar" class="categories"></div>
+    </section>
+
+    <!-- Vitrine Dinâmica -->
+    <section id="productGrid" class="grid">
+      <div class="empty">Carregando achadinhos...</div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Giga Achadinhos</strong> — Curadoria independente de ofertas.</p>
+    <p style="margin-top: 6px;">Como afiliado, podemos receber comissão por compras qualificadas sem custo extra para você.</p>
+  </footer>
+
+  <script>
+    const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/SEU_LINK_DO_GRUPO";
+    let allProducts = [];
+    let activeCategory = "Todos";
+
+    document.querySelectorAll('a[href*="SEU_LINK_DO_GRUPO"]').forEach(el => {
+      el.href = WHATSAPP_GROUP_URL;
+    });
+
+    async function loadProducts() {
+      const grid = document.getElementById("productGrid");
+      try {
+        const res = await fetch("produtos.json?v=" + Date.now());
+        if (!res.ok) throw new Error("Falha ao carregar produtos.json");
+        allProducts = await res.json();
+        buildCategories();
+        renderProducts();
+      } catch (err) {
+        grid.innerHTML = '<div class="empty">Nenhum achadinho publicado ainda. Volte em instantes!</div>';
+      }
+    }
+
+    function buildCategories() {
+      const bar = document.getElementById("categoryBar");
+      const cats = ["Todos", ...new Set(allProducts.map(p => p.categoria).filter(Boolean))];
+      bar.innerHTML = cats.map(cat => `
+        <button class="cat-btn ${cat === activeCategory ? 'active' : ''}" data-cat="${cat}">
+          ${cat}
+        </button>
+      `).join("");
+
+      bar.querySelectorAll(".cat-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          activeCategory = btn.dataset.cat;
+          buildCategories();
+          renderProducts();
+        });
+      });
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById("productGrid");
+      const term = document.getElementById("searchInput").value.toLowerCase().trim();
+
+      const filtered = allProducts.filter(p => {
+        const matchCat = activeCategory === "Todos" || p.categoria === activeCategory;
+        const matchText = !term ||
+          (p.titulo && p.titulo.toLowerCase().includes(term)) ||
+          (p.categoria && p.categoria.toLowerCase().includes(term));
+        return matchCat && matchText;
+      });
+
+      if (!filtered.length) {
+        grid.innerHTML = '<div class="empty">Nenhum achadinho encontrado com esse filtro.</div>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <a class="card" href="produto.html?id=${encodeURIComponent(p.id)}">
+          <div class="thumb-wrap">
+            ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
+            <img src="${p.imagem}" alt="${p.titulo}" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <span class="card-cat">${p.categoria || "Achadinho"}</span>
+            <h2 class="card-title">${p.titulo}</h2>
+            <div class="price-row">
+              ${p.preco_antigo ? `<span class="old-price">${p.preco_antigo}</span>` : ""}
+              <span class="price">${p.preco}</span>
+            </div>
+            <div class="cta-card">Ver Oferta</div>
+          </div>
+        </a>
+      `).join("");
+    }
+
+    document.getElementById("searchInput").addEventListener("input", renderProducts);
+    loadProducts();
+  </script>
+</body>
+</html>
