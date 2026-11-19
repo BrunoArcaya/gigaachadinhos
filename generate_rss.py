@@ -25,8 +25,8 @@ def build_feed(products):
         link = f"{BASE_URL}/linha.html?id={escape_xml(product_id)}"
         affiliate = p.get("link_afiliado", "")
 
-        # Imagem de capa:优先 imagem_video_capa, senão imagem
-        img = p.get("imagem_video_capa") or p.get("imagem")
+        # Imagem do produto:优先 imagem (foto do produto), senão imagem_video_capa
+        img = p.get("imagem") or p.get("imagem_video_capa")
         if not img:
             continue
 
