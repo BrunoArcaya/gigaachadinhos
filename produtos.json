@@ -11,5 +11,18 @@
     "imagem_video_capa": "media/celular-exemplo-x1-pro/foto2.jpg",
     "descricao": "O Celular Exemplo X1 Pro chega com tela AMOLED de 6,7\", processador de última geração e bateria que dura dois dias. Ideal para quem busca desempenho e autonomia.",
     "link_afiliado": "https://link.exemplo.com/celular-x1-pro"
+  },
+  {
+    "id": "porta-chaves-deus-bom",
+    "titulo": "Porta-Chaves Decorativo “Deus é Bom o Tempo Todo” em MDF 3mm",
+    "categoria": "Decoração",
+    "preco": "R$ 29,90",
+    "preco_antigo": "",
+    "badge": "Fé e Elegância",
+    "imagem": "media/porta-chaves-deus-bom/principal.avif",
+    "imagem_video": "media/porta-chaves-deus-bom/video.mp4",
+    "imagem_video_capa": "media/porta-chaves-deus-bom/capa_video.avif",
+    "descricao": "Leve mais organização, fé e elegância para o seu ambiente! Fabricado em MDF Premium com corte a laser, acompanha fita 3M para instalação sem furos. Medidas: 20cm x 10cm.",
+    "link_afiliado": "https://s.shopee.com.br/9KjkcGkxSU"
   }
 ]
