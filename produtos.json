@@ -1,13 +1,15 @@
 [
   {
-    "id": "mini-processador-eletrico-usb",
-    "titulo": "Mini Processador Triturador Elétrico USB 250ml",
-    "categoria": "Cozinha",
-    "preco": "R$ 24,90",
-    "preco_antigo": "R$ 49,90",
+    "id": "exemplo-celular",
+    "titulo": "Celular Exemplo X1 Pro",
+    "categoria": "Tecnologia",
+    "preco": "R$ 899,90",
+    "preco_antigo": "R$ 1.099,90",
     "badge": "Mais Vendido",
-    "imagem": "logo.png",
-    "descricao": "Tritura alho, cebola e temperos em segundos sem sujar as mãos. Bateria recarregável via USB com 3 lâminas em aço inox.",
-    "link_afiliado": "https://shopee.com.br"
+    "imagem": "media/celular-exemplo-x1-pro/foto1.jpg",
+    "imagem_video": "media/celular-exemplo-x1-pro/video.mp4",
+    "imagem_video_capa": "media/celular-exemplo-x1-pro/foto2.jpg",
+    "descricao": "O Celular Exemplo X1 Pro chega com tela AMOLED de 6,7\", processador de última geração e bateria que dura dois dias. Ideal para quem busca desempenho e autonomia.",
+    "link_afiliado": "https://link.exemplo.com/celular-x1-pro"
   }
 ]
