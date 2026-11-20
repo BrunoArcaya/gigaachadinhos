@@ -210,6 +210,12 @@
       border-top: 1px solid #e5e7eb;
       background: #fff;
     }
+    /* Oculta os controles nativos do vídeo, mantendo clique na capa para play/pausa */
+    .thumb-wrap video::-webkit-media-controls-play-button,
+    .thumb-wrap video::-webkit-media-controls-start-playback-button,
+    .thumb-wrap video::-webkit-media-controls { display: none !important; }
+    .thumb-wrap video::-moz-media-controls { display: none !important; }
+    .thumb-wrap video::-ms-media-controls { display: none !important; }
   </style>
 </head>
 <body>
