@@ -162,6 +162,7 @@
     .card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
     .thumb-wrap { position: relative; width: 100%; aspect-ratio: 1 / 1; background: #f3f4f6; }
     .thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .thumb-wrap video { width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer; }
     .badge {
       position: absolute;
       top: 8px;
@@ -308,12 +309,11 @@
 
       grid.innerHTML = filtered.map(p => `
         <div class="card">
-          <div class="thumb-wrap">
+          <div class="thumb-wrap" data-has-video="${p.imagem_video ? '1' : '0'}">
             ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
             ${p.imagem_video ?
-              `<video width="100%" height="100%" controls poster="${p.imagem_video_capa}">
+              `<video class="thumb-video" poster="${p.imagem_video_capa}" playsinline>
                  <source src="${p.imagem_video}" type="video/mp4">
-                 Your browser does not support the video tag.
                </video>` :
               `<img src="${p.imagem}" alt="${p.titulo}" loading="lazy" />`
             }
@@ -329,8 +329,25 @@
           </div>
         </div>
       `).join("");
+      bindThumbClicks();
     }
 
+
+    function bindThumbClicks() {
+      document.querySelectorAll('.thumb-wrap[data-has-video="1"]').forEach(wrap => {
+        const video = wrap.querySelector('video');
+        if (!video) return;
+        wrap.addEventListener('click', () => {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+        video.addEventListener('ended', () => { video.currentTime = 0; });
+      });
+    }
 
     document.getElementById("searchInput").addEventListener("input", renderProducts);
     loadProducts();
