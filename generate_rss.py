@@ -38,7 +38,7 @@ def build_feed(products):
         if price:
             html_desc += f"<p><strong>Preço:</strong> {escape_xml(price)}</p>"
         if affiliate:
-            html_desc += f'<p><a href="{escape_xml(affiliate)}" rel="nofollow">Ver oferta</a></p>'
+            html_desc += f'<p><a href="{escape_xml(affiliate)}" rel="nofollow">Ver na Shopee</a></p>'
 
         item = f"""  <item>
     <title>{title}</title>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="p:domain_verify" content="6c488d9a496039cee2d7da347e08bfb4" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  
+  <!-- Open Graph / Pinterest Rich Pins -->
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Giga Achadinhos" />
+  <meta property="og:url" content="" id="og-url" />
+  <meta property="og:title" content="" id="og-title" />
+  <meta property="og:description" content="" id="og-description" />
+  <meta property="og:image" content="" id="og-image" />
+  <meta property="product:price:amount" content="" id="og-price-amount" />
+  <meta property="product:price:currency" content="BRL" />
+  <meta property="product:availability" content="instock" />
+  <meta property="product:retailer_item_id" content="" id="og-retailer-id" />
+  <meta property="product:brand" content="Giga Achadinhos" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="" id="twitter-title" />
+  <meta name="twitter:description" content="" id="twitter-description" />
+  <meta name="twitter:image" content="" id="twitter-image" />
+  
+  <title id="page-title">Giga Achadinhos | Produto</title>
+  <meta name="description" content="" id="page-description" />
+  <meta name="robots" content="index, follow" />
+  
+  <style>
+    :root {
+      --navy: #14284b;
+      --primary: #ee4d2d;
+      --primary-dark: #d73211;
+      --whatsapp: #25d366;
+      --whatsapp-dark: #1ebe5d;
+      --bg: #f4f5f7;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); line-height: 1.5; min-height: 100vh; display: flex; flex-direction: column; }
+    header {
+      background: #ebebeb;
+      border-bottom: 1px solid #dcdcdc;
+      padding: 10px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-logo { height: 52px; width: 52px; object-fit: contain; border-radius: 10px; }
+    .brand-title { font-weight: 800; font-size: 1.15rem; color: var(--navy); letter-spacing: -0.3px; }
+    .container { max-width: 980px; margin: 0 auto; padding: 16px; flex: 1; width: 100%; }
+    .product-page {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid #e5e7eb;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    }
+    .product-gallery { position: relative; background: #f3f4f6; }
+    .gallery-main { width: 100%; display: block; }
+    .gallery-main img, .gallery-main video { width: 100%; height: auto; display: block; }
+    .product-info { padding: 20px 16px; }
+    .product-category { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
+    .product-title { font-size: 1.25rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .product-price-row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+    .product-old-price { font-size: 1rem; color: var(--muted); text-decoration: line-through; }
+    .product-price { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+    .product-badge { display: inline-block; background: var(--primary); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; margin-bottom: 12px; }
+    .product-description { font-size: 0.95rem; color: var(--text); line-height: 1.6; margin-bottom: 20px; }
+    .product-cta {
+      display: inline-block;
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(238, 77, 45, 0.3);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .product-cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .product-cta:active { transform: translateY(0); }
+    .product-meta { margin-top: 20px; padding-top: 16px; border-top: 1px solid #e5e7eb; font-size: 0.82rem; color: var(--muted); }
+    .product-meta p { margin: 4px 0; }
+    .product-meta a { color: var(--primary); text-decoration: none; }
+    .product-meta a:hover { text-decoration: underline; }
+    .loading { text-align: center; padding: 60px 20px; color: var(--muted); }
+    .error { text-align: center; padding: 60px 20px; color: var(--primary); }
+    .gallery-video { cursor: pointer; }
+    .gallery-video::-webkit-media-controls { display: none !important; }
+    .gallery-video::-webkit-media-controls-start-playback-button { display: none !important; }
+    .gallery-video::-webkit-media-controls-play-button { display: none !important; }
+    .gallery-video::-moz-media-controls { display: none !important; }
+    @media (min-width: 768px) {
+      .product-info { padding: 32px 24px; }
+      .product-title { font-size: 1.5rem; }
+      .product-price { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="brand-link">
+      <img src="logo.png" alt="Logo Giga Achadinhos" class="brand-logo" />
+      <span class="brand-title">Giga Achadinhos</span>
+    </a>
+  </header>
+  <main class="container">
+    <div id="productContainer" class="product-page">
+      <div class="loading">Carregando produto...</div>
+    </div>
+  </main>
+  <script>
+    const BASE_URL = "https://gigaachadinhos.shop";
+    
+    function getProductIdFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('id');
+    }
+    
+    async function loadProduct() {
+      const productId = getProductIdFromUrl();
+      const container = document.getElementById('productContainer');
+      
+      if (!productId) {
+        container.innerHTML = '<div class="error">Produto não encontrado. ID ausente na URL.</div>';
+        return;
+      }
+      
+      try {
+        const res = await fetch('produtos.json?v=' + Date.now());
+        if (!res.ok) throw new Error('Falha ao carregar produtos.json');
+        const products = await res.json();
+        const product = products.find(p => p.id === productId);
+        
+        if (!product) {
+          container.innerHTML = '<div class="error">Produto não encontrado: ' + productId + '</div>';
+          return;
+        }
+        
+        renderProduct(product);
+      } catch (err) {
+        container.innerHTML = '<div class="error">Erro ao carregar produto: ' + err.message + '</div>';
+      }
+    }
+    
+    function renderProduct(p) {
+      const container = document.getElementById('productContainer');
+      const productUrl = BASE_URL + '/linha.html?id=' + p.id;
+      const imgUrl = BASE_URL + '/' + (p.imagem || p.imagem_video_capa);
+      const priceValue = (p.preco || '').replace('R$', '').replace('.', '').replace(',', '.').trim();
+      
+      // Update meta tags
+      document.getElementById('page-title').textContent = p.titulo + ' | Giga Achadinhos';
+      document.getElementById('page-description').content = p.descricao;
+      document.getElementById('og-url').content = productUrl;
+      document.getElementById('og-title').content = p.titulo;
+      document.getElementById('og-description').content = p.descricao;
+      document.getElementById('og-image').content = imgUrl;
+      document.getElementById('og-price-amount').content = priceValue;
+      document.getElementById('og-retailer-id').content = p.id;
+      document.getElementById('twitter-title').content = p.titulo;
+      document.getElementById('twitter-description').content = p.descricao;
+      document.getElementById('twitter-image').content = imgUrl;
+      
+      // Build gallery
+      let galleryHtml = '';
+      if (p.imagem_video) {
+        galleryHtml = `
+          <div class="gallery-main">
+            <video class="gallery-video" poster="${p.imagem_video_capa}" playsinline id="mainVideo">
+              <source src="${p.imagem_video}" type="video/mp4">
+            </video>
+          </div>
+        `;
+      } else {
+        galleryHtml = `
+          <div class="gallery-main">
+            <img src="${p.imagem}" alt="${p.titulo}" loading="eager" />
+          </div>
+        `;
+      }
+      
+      // Build price row
+      let priceHtml = `<span class="product-price">${p.preco}</span>`;
+      if (p.preco_antigo) {
+        priceHtml = `<span class="product-old-price">${p.preco_antigo}</span>` + priceHtml;
+      }
+      
+      // Build badge
+      let badgeHtml = '';
+      if (p.badge) {
+        badgeHtml = `<span class="product-badge">${p.badge}</span>`;
+      }
+      
+      container.innerHTML = `
+        ${galleryHtml}
+        <div class="product-info">
+          <span class="product-category">${p.categoria || 'Achadinho'}</span>
+          ${badgeHtml}
+          <h1 class="product-title">${p.titulo}</h1>
+          <div class="product-price-row">
+            ${priceHtml}
+          </div>
+          <p class="product-description">${p.descricao}</p>
+          <a href="${p.link_afiliado}" target="_blank" rel="noopener noreferrer" class="product-cta">
+            Ver na Shopee
+          </a>
+          <div class="product-meta">
+            <p><strong>Giga Achadinhos</strong> — Curadoria independente de ofertas da Shopee.</p>
+            <p>Como afiliado, podemos receber comissão por compras qualificadas sem custo extra para você.</p>
+            <p><a href="/">← Voltar para a home</a></p>
+          </div>
+        </div>
+      `;
+      
+      // Bind video click for play/pause
+      const video = document.getElementById('mainVideo');
+      if (video) {
+        video.style.cursor = 'pointer';
+        video.addEventListener('click', () => {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+        video.addEventListener('ended', () => { video.currentTime = 0; });
+      }
+    }
+    
+    loadProduct();
+  </script>
+</body>
+</html>
